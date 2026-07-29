@@ -1,7 +1,7 @@
 services:
   - type: web
     name: arcana-cloud
-    runtime: node
+    env: node
     region: ohio
     plan: free
     buildCommand: npm --prefix web install && npm --prefix web run build && npm --prefix backend install && npm --prefix backend run build
