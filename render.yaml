@@ -4,8 +4,8 @@ services:
     env: node
     region: ohio
     plan: free
-    buildCommand: cd web && npm install && npm run build && cd ../backend && npm install && npm run build
-    startCommand: cd backend && node dist/index.js
+    buildCommand: "cd web && npm install && npm run build && cd ../backend && npm install && npm run build"
+    startCommand: "cd backend && node dist/index.js"
     envVars:
       - key: NODE_ENV
         value: production
@@ -13,17 +13,9 @@ services:
         sync: false
       - key: SUPABASE_ANON_KEY
         sync: false
-      - key: SUPABASE_SERVICE_KEY
-        sync: false
-      - key: GEMINI_API_KEY
-        sync: false
-      - key: OPENAI_API_KEY
-        sync: false
-      - key: DEEPSEEK_API_KEY
-        sync: false
       - key: VITE_SUPABASE_URL
         sync: false
       - key: VITE_SUPABASE_ANON_KEY
         sync: false
       - key: CORS_ORIGINS
-        value: https://arcana-cloud.onrender.com
+        value: "https://arcana-cloud.onrender.com"
