@@ -15,8 +15,8 @@ export default function Cartas() {
   const navigate = useNavigate()
 
   useEffect(() => {
-    fetch('/api/ake/arcanos-mayores').then((r) => r.json()).then(setMayores)
-    fetch('/api/ake/arcanos-menores').then((r) => r.json()).then(setMenores)
+    fetch('https://arcana-cloud.onrender.com/api/ake/arcanos-mayores').then((r) => r.json()).then(setMayores)
+    fetch('https://arcana-cloud.onrender.com/api/ake/arcanos-menores').then((r) => r.json()).then(setMenores)
   }, [])
 
   const filterCards = (cards: any[]) => {

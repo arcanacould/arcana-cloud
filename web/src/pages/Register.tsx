@@ -20,7 +20,7 @@ export default function Register() {
     setSuccess('')
 
     try {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch('https://arcana-cloud.onrender.com/api/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password, nombre, rol: 'tarotista' }),

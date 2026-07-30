@@ -51,7 +51,7 @@ export default function Marketplace() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/public/tarotistas')
+    fetch('https://arcana-cloud.onrender.com/api/public/tarotistas')
       .then((r) => r.json())
       .then((data) => setTarotistas(data || []))
       .catch(() => setTarotistas([]))

@@ -12,7 +12,7 @@ export default function CartaDetail() {
 
   useEffect(() => {
     if (!nombre) return
-    fetch(`/api/ake/${encodeURIComponent(nombre)}`).then((r) => r.json()).then(setCarta).catch(() => setCarta(null))
+    fetch(`https://arcana-cloud.onrender.com/api/ake/${encodeURIComponent(nombre)}`).then((r) => r.json()).then(setCarta).catch(() => setCarta(null))
   }, [nombre])
 
   if (!carta) return <p className="text-sm text-gray-500">{t('cartas.loading')}</p>
